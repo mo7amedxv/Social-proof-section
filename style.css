@@ -53,6 +53,7 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  font-family: "League Spartan";
 }
 
 /* 7. Remove list styles */
@@ -307,5 +308,6 @@ blockquote {
     place-items: center;
   }
 }
+
 
 
