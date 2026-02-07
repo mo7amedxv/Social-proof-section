@@ -104,7 +104,7 @@ a {
 /* League Spartan - 700 */
 @font-face {
   font-family: "League Spartan";
-  src: url("social-proof-section-master/fonts/static/LeagueSpartan-bold.ttf");
+  src: url("social-proof-section-master/fonts/static/LeagueSpartan-Bold.ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -307,4 +307,5 @@ blockquote {
     place-items: center;
   }
 }
+
 
