@@ -1,0 +1,309 @@
+/* =====================
+   CSS RESET
+   ===================== */
+
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "League Spartan";
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+/* 4. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Remove built-in form typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 6. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 8. Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =====================
+   CSS VARIABLES
+   ===================== */
+:root {
+  /* Primary */
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+  /* Font */
+  --fs-base: 15px;
+}
+
+/* League Spartan - 400 */
+@font-face {
+  font-family: "League Spartan";
+  src: url("social-proof-section-master/fonts/static/LeagueSpartan-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* League Spartan - 500 */
+@font-face {
+  font-family: "League Spartan";
+  src: url("social-proof-section-master/fonts/static/LeagueSpartan-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* League Spartan - 700 */
+@font-face {
+  font-family: "League Spartan";
+  src: url("social-proof-section-master/fonts/static/LeagueSpartan-bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/* Frame work */
+.very-dark {
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+}
+.container {
+  min-height: 100vh;
+  padding: 1rem;
+  gap: 1rem;
+  display: grid;
+}
+.attribution {
+  font-size: 0.7rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin-top: 50px;
+}
+
+section:first-child {
+  margin-left: 10px;
+}
+
+header p {
+  color: var(--Dark-Grayish-Magenta);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+header h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.section {
+  display: grid;
+  gap: 1rem;
+}
+.rated {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 10px;
+  width: 370px;
+}
+
+.star-container {
+  display: flex;
+}
+.star {
+  width: 14px;
+  height: 14px;
+  margin-left: 5px;
+}
+
+.section {
+  display: grid;
+  gap: 1rem;
+}
+
+.section .rated:nth-child(1) {
+  margin-left: 0;
+}
+
+.section .rated:nth-child(2) {
+  margin-left: 40px;
+}
+
+.section .rated:nth-child(3) {
+  margin-left: 80px;
+}
+
+.rated p {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+}
+
+article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  height: fit-content;
+}
+.card {
+  background: var(--Very-Dark-Magenta);
+  padding: 2rem 2rem;
+  border-radius: 10px;
+}
+.pfp-info {
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.white {
+  color: var(--White);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.pink,
+.white {
+  font-size: 1rem;
+}
+
+.pink {
+  color: var(--Soft-Pink);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+blockquote {
+  color: var(--White);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 768px) and (min-width: 412px) {
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    width: 100%;
+  }
+  .section {
+    width: 100%;
+  }
+  .section .rated:nth-child(1) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .section .rated:nth-child(2) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .section .rated:nth-child(3) {
+    margin-left: 0;
+    width: 100%;
+  }
+  article {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 412px) {
+  header {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    width: 100%;
+  }
+  .section {
+    width: 100%;
+  }
+  .section .rated:nth-child(1) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .section .rated:nth-child(2) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .section .rated:nth-child(3) {
+    margin-left: 0;
+    width: 100%;
+  }
+  article {
+    grid-template-columns: 1fr;
+  }
+  .rated {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+}
